@@ -1,0 +1,13 @@
+[Unit]
+Decription=Promtail service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/shipment/promtail-linux-amd64 -config.file /opt/shipment/ship-logs-config.yaml
+User=root
+Group=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.targe
