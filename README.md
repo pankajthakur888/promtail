@@ -66,3 +66,8 @@ Restart=always
 [Install] 
 WantedBy=multi-user.target 
 ############################################################################ 
+
+
+sudo systemctl enable promtail.service
+sudo systemctl start promtail.service
+sudo systemctl status promtail.service
